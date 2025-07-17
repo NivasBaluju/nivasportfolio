@@ -3,35 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Nivas | Web Developer Portfolio</title>
     <meta name="description" content="Portfolio of Nivas – Web Developer focused on clean UI, responsive design, and modern web technologies." />
     <meta name="author" content="Nivas" />
-    
-    <link rel="icon" href="./favicon.ico" />
-    
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph Meta -->
     <meta property="og:title" content="Nivas | Web Developer Portfolio" />
     <meta property="og:description" content="Explore Nivas's professional web projects, skills, and contact information." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1581093588401-2c80c8c24485?auto=format&fit=crop&w=800&q=60" />
+    <meta property="og:image" content="/cover.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
 
-    <!-- Twitter Card Meta -->
+    <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@nivasbaluju" />
     <meta name="twitter:title" content="Nivas | Web Developer Portfolio" />
-    <meta name="twitter:description" content="Explore projects and skills of Nivas, a front-end web developer." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581093588401-2c80c8c24485?auto=format&fit=crop&w=800&q=60" />
+    <meta name="twitter:description" content="Clean UI, responsive designs & modern web projects by Nivas." />
+    <meta name="twitter:image" content="/cover.png" />
+
+    <!-- Favicon and Manifest -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <script>
+      // Optional: Enable dark mode based on system preference
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
   </head>
 
-  <body style="font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa;">
-    <div id="root" style="text-align: center; padding: 3rem;">
-      <h1 style="font-size: 3rem; color: #2c3e50; margin-bottom: 0.5rem;">Nivas Portfolio</h1>
-      <p style="font-size: 1.25rem; color: #555;">
-        Web Developer | Passionate About Clean Code & UI/UX
-      </p>
-    </div>
-
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="font-[Inter] bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
