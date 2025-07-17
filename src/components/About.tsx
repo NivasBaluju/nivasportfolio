@@ -8,15 +8,13 @@ const About = () => {
           </h2>
           <div className="bg-card rounded-lg shadow-classic p-8 md:p-12">
             <p className="text-lg leading-relaxed text-foreground mb-6">
-              Highly motivated Computer Science student with strong programming and 
-              analytical skills. Quick to adapt, eager to learn, and committed to delivering quality 
-              results through teamwork and precision.
+              I am a passionate and detail-oriented Computer Science student with a strong foundation in programming, problem-solving, and software development. My goal is to create impactful digital solutions by combining technical skills with a user-first mindset.
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+              With a keen interest in web technologies, data analytics, and scalable systems, I am constantly exploring new tools and frameworks to stay ahead in the ever-evolving tech landscape. I thrive in collaborative environments and enjoy turning innovative ideas into working solutions.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              As an aspiring tech leader, I am passionate about leveraging data analytics 
-              and modern technologies to solve real-world problems. My journey in computer 
-              science has equipped me with both technical expertise and leadership skills 
-              that I continue to develop through hands-on projects and collaborative experiences.
+              Whether it’s through contributing to open-source projects, building full-stack applications, or learning from hands-on challenges, I am driven to grow as a developer and contribute meaningfully to the tech community.
             </p>
           </div>
         </div>
