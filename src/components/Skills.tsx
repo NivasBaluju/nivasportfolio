@@ -2,17 +2,17 @@ import { Code2, Users, Lightbulb, Target } from "lucide-react";
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "Programming", skills: ["Python", "Java", "C", "C++", "SQL"] },
-    { name: "Data Analytics", skills: ["Pandas", "Matplotlib", "Yahoo Finance API"] },
-    { name: "Data Visualization", skills: ["Charting & Graphs using Python"] },
-    { name: "API Integration", skills: ["Experience with financial data APIs"] }
+    { name: "Programming Languages", skills: ["Python", "Java", "C", "C++", "SQL"] },
+    { name: "Data Analytics Tools", skills: ["Pandas", "Matplotlib", "Yahoo Finance API"] },
+    { name: "Data Visualization", skills: ["Charts", "Graphs", "Dashboards using Python"] },
+    { name: "API Integration", skills: ["Financial APIs", "REST API Handling"] },
   ];
 
   const professionalSkills = [
     "Leadership & Event Management",
-    "Digital Marketing",
+    "Digital Marketing Strategies",
     "Negotiation & Critical Thinking",
-    "Teamwork & Creativity"
+    "Team Collaboration & Creative Ideation",
   ];
 
   return (
@@ -22,7 +22,7 @@ const Skills = () => {
           <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
             Skill Summary
           </h2>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
             <div className="bg-card rounded-lg shadow-classic p-8">
@@ -34,17 +34,17 @@ const Skills = () => {
                   Technical Skills
                 </h3>
               </div>
-              
+
               <div className="space-y-6">
                 {technicalSkills.map((category, index) => (
                   <div key={index}>
                     <h4 className="font-semibold text-secondary mb-3 flex items-center">
                       <Target className="w-4 h-4 mr-2" />
-                      {category.name}:
+                      {category.name}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, skillIndex) => (
-                        <span 
+                        <span
                           key={skillIndex}
                           className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium"
                         >
@@ -67,7 +67,7 @@ const Skills = () => {
                   Professional Skills
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 {professionalSkills.map((skill, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -79,27 +79,27 @@ const Skills = () => {
 
               {/* Achievements Section */}
               <div className="mt-8 pt-6 border-t border-border">
-                <h4 className="font-semibold text-secondary mb-4">Key Achievements:</h4>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                <h4 className="font-semibold text-secondary mb-4">Key Achievements</h4>
+                <ul className="space-y-3 list-none">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <p className="text-foreground text-sm">
-                      Successfully led Math Club events with real-world applications
+                      Spearheaded real-world math events as Math Club lead, promoting practical applications
                     </p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <p className="text-foreground text-sm">
-                      Developed innovative fuzzy logic vehicle control system
+                      Engineered an intelligent fuzzy logic system for adaptive vehicle control
                     </p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <p className="text-foreground text-sm">
-                      Created comprehensive stock analysis visualization tools
+                      Built end-to-end stock analysis dashboards for actionable data insights
                     </p>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
