@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, Instagram, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -38,16 +38,6 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary/10 p-3 rounded-full">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+91 80082 33881</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -66,7 +56,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* LinkedIn */}
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Linkedin className="w-5 h-5 text-primary" />
@@ -84,7 +73,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* GitHub */}
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Github className="w-5 h-5 text-primary" />
@@ -102,7 +90,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Instagram */}
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Instagram className="w-5 h-5 text-primary" />
