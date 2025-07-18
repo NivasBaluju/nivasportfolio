@@ -1,6 +1,22 @@
-import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      setFormSubmitted(false);
+    }, 3000);
+
+    // Reset the form (optional)
+    e.currentTarget.reset();
+  };
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -10,7 +26,7 @@ const Contact = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Information */}
+            {/* Contact Info */}
             <div className="space-y-8">
               <div>
                 <h3 className="font-serif text-2xl font-semibold text-primary mb-6">
@@ -94,7 +110,7 @@ const Contact = () => {
                 Send a Message
               </h3>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Full Name
@@ -157,6 +173,13 @@ const Contact = () => {
                   <Send className="w-4 h-4" />
                   <span>Send Message</span>
                 </button>
+
+                {formSubmitted && (
+                  <div className="flex items-center mt-4 text-green-600 space-x-2">
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Message sent successfully!</span>
+                  </div>
+                )}
               </form>
             </div>
           </div>
