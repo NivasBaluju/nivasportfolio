@@ -3,18 +3,18 @@ const About = () => {
     <section id="about" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
             About Me
           </h2>
-          <div className="bg-card rounded-lg shadow-classic p-8 md:p-12">
-            <p className="text-lg leading-relaxed text-foreground mb-6">
-              I am a passionate and detail-oriented Computer Science student with a strong foundation in programming, problem-solving, and software development. My goal is to create impactful digital solutions by combining technical skills with a user-first mindset.
+          <div className="bg-card rounded-2xl shadow-classic p-8 md:p-12">
+            <p className="text-xl md:text-[1.25rem] leading-relaxed text-foreground mb-6 font-medium">
+              I’m a <span className="text-primary font-semibold">passionate and detail-oriented</span> Computer Science student with a solid foundation in programming, problem-solving, and software development. My mission is to craft meaningful digital solutions that combine technical depth with a user-first perspective.
             </p>
-            <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-              With a keen interest in web technologies, data analytics, and scalable systems, I am constantly exploring new tools and frameworks to stay ahead in the ever-evolving tech landscape. I thrive in collaborative environments and enjoy turning innovative ideas into working solutions.
+            <p className="text-base md:text-lg leading-loose text-muted-foreground mb-6 italic">
+              Fascinated by modern web technologies, data-driven insights, and scalable architectures, I actively explore new tools and frameworks to stay sharp in the dynamic tech ecosystem. I thrive in collaborative teams and enjoy translating ideas into functional, impactful systems.
             </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Whether it’s through contributing to open-source projects, building full-stack applications, or learning from hands-on challenges, I am driven to grow as a developer and contribute meaningfully to the tech community.
+            <p className="text-base md:text-lg leading-loose text-muted-foreground border-l-4 border-primary pl-4">
+              From contributing to open-source to building full-stack apps and embracing hands-on challenges, I’m committed to growing as a developer and giving back to the tech community through continuous learning and innovation.
             </p>
           </div>
         </div>
