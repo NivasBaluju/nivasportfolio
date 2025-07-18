@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="bg-gradient-hero text-primary-foreground min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-6 text-center">
         <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">
-          B.NIVAS
+          NIVAS BALUJU
         </h1>
         <div className="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto leading-relaxed">
           <p className="mb-2">CSE Undergraduate</p>
