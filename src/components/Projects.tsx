@@ -1,4 +1,4 @@
-import { Code, ExternalLink, Github } from "lucide-react";
+import { Code } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -22,7 +22,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-blue-600">
+          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
             Projects & Research
           </h2>
 
@@ -30,60 +30,39 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg shadow-classic hover:shadow-lifted transition-shadow duration-300"
+                className="bg-card rounded-xl border border-border hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      <Code className="w-6 h-6 text-blue-600" />
+                    <div className="bg-muted p-3 rounded-full">
+                      <Code className="w-6 h-6 text-primary" />
                     </div>
-                    <span className="text-xs font-semibold text-gray-700 bg-gray-200 px-3 py-1 rounded-full">
+                    <span className="text-xs font-medium text-muted-foreground bg-muted px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-xl font-semibold text-blue-700 mb-3">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                     {project.title}
                   </h3>
 
-                  <p className="text-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {project.description}
                   </p>
 
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2">
-                        Technologies Used:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex space-x-4 pt-4 border-t border-border">
-                      <a
-                        href="#"
-                        aria-label="View source code on GitHub"
-                        className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors"
-                      >
-                        <Github className="w-4 h-4" />
-                        <span className="text-sm">View Code</span>
-                      </a>
-                      <a
-                        href="#"
-                        aria-label="Open project details"
-                        className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        <span className="text-sm">Live Demo</span>
-                      </a>
+                  <div>
+                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">
+                      Technologies Used:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
