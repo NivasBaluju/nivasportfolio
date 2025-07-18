@@ -3,18 +3,18 @@ const About = () => {
     <section id="about" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-center mb-12 text-primary tracking-tight">
             About Me
           </h2>
-          <div className="bg-card rounded-2xl shadow-classic p-8 md:p-12">
-            <p className="text-xl md:text-[1.25rem] leading-relaxed text-foreground mb-6 font-medium">
-              I’m a <span className="text-primary font-semibold">passionate and detail-oriented</span> Computer Science student with a solid foundation in programming, problem-solving, and software development. My mission is to craft meaningful digital solutions that combine technical depth with a user-first perspective.
+          <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12">
+            <p className="font-sans text-lg md:text-xl text-foreground leading-relaxed mb-6 tracking-wide">
+              I’m a <span className="font-semibold text-primary">passionate and detail-oriented</span> Computer Science student with a strong foundation in programming, problem-solving, and software development. I aim to create impactful digital solutions by combining technical skills with a user-first mindset.
             </p>
-            <p className="text-base md:text-lg leading-loose text-muted-foreground mb-6 italic">
-              Fascinated by modern web technologies, data-driven insights, and scalable architectures, I actively explore new tools and frameworks to stay sharp in the dynamic tech ecosystem. I thrive in collaborative teams and enjoy translating ideas into functional, impactful systems.
+            <p className="font-sans text-base md:text-lg text-muted-foreground leading-loose mb-6 tracking-normal">
+              My interests include web technologies, data analytics, and scalable systems. I stay updated with emerging tools and frameworks to remain effective in the ever-evolving tech landscape. I value collaboration and enjoy transforming innovative ideas into real-world applications.
             </p>
-            <p className="text-base md:text-lg leading-loose text-muted-foreground border-l-4 border-primary pl-4">
-              From contributing to open-source to building full-stack apps and embracing hands-on challenges, I’m committed to growing as a developer and giving back to the tech community through continuous learning and innovation.
+            <p className="font-sans text-base md:text-lg text-muted-foreground leading-loose tracking-normal">
+              Whether contributing to open-source, developing full-stack apps, or tackling hands-on challenges, I’m committed to growing as a developer and making a meaningful impact in the tech world.
             </p>
           </div>
         </div>
