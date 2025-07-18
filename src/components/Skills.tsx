@@ -19,18 +19,18 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
+          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-gray-800">
             Skill Summary
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
-            <div className="bg-card rounded-lg shadow-classic p-8">
+            <div className="bg-white rounded-xl shadow-md p-8">
               <div className="flex items-center space-x-3 mb-8">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Code2 className="w-6 h-6 text-primary" />
+                <div className="bg-gray-100 p-3 rounded-full">
+                  <Code2 className="w-6 h-6 text-gray-700" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-primary">
+                <h3 className="font-serif text-2xl font-semibold text-gray-800">
                   Technical Skills
                 </h3>
               </div>
@@ -38,15 +38,15 @@ const Skills = () => {
               <div className="space-y-6">
                 {technicalSkills.map((category, index) => (
                   <div key={index}>
-                    <h4 className="font-semibold text-secondary mb-3 flex items-center">
-                      <Target className="w-4 h-4 mr-2" />
+                    <h4 className="font-semibold text-gray-600 mb-3 flex items-center">
+                      <Target className="w-4 h-4 mr-2 text-gray-500" />
                       {category.name}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium"
+                          className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
                         >
                           {skill}
                         </span>
@@ -58,12 +58,12 @@ const Skills = () => {
             </div>
 
             {/* Professional Skills */}
-            <div className="bg-card rounded-lg shadow-classic p-8">
+            <div className="bg-white rounded-xl shadow-md p-8">
               <div className="flex items-center space-x-3 mb-8">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Users className="w-6 h-6 text-primary" />
+                <div className="bg-gray-100 p-3 rounded-full">
+                  <Users className="w-6 h-6 text-gray-700" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-primary">
+                <h3 className="font-serif text-2xl font-semibold text-gray-800">
                   Professional Skills
                 </h3>
               </div>
@@ -71,31 +71,31 @@ const Skills = () => {
               <div className="space-y-4">
                 {professionalSkills.map((skill, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <Lightbulb className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <span className="text-foreground font-medium">{skill}</span>
+                    <Lightbulb className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                    <span className="text-gray-800 font-medium">{skill}</span>
                   </div>
                 ))}
               </div>
 
               {/* Achievements Section */}
-              <div className="mt-8 pt-6 border-t border-border">
-                <h4 className="font-semibold text-secondary mb-4">Key Achievements</h4>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="font-semibold text-gray-600 mb-4">Key Achievements</h4>
                 <ul className="space-y-3 list-none">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-foreground text-sm">
+                    <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0" />
+                    <p className="text-gray-700 text-sm">
                       Spearheaded real-world math events as Math Club lead, promoting practical applications
                     </p>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-foreground text-sm">
+                    <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0" />
+                    <p className="text-gray-700 text-sm">
                       Engineered an intelligent fuzzy logic system for adaptive vehicle control
                     </p>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-foreground text-sm">
+                    <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0" />
+                    <p className="text-gray-700 text-sm">
                       Built end-to-end stock analysis dashboards for actionable data insights
                     </p>
                   </li>
