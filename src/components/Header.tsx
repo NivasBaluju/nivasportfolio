@@ -13,11 +13,14 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-card/95 backdrop-blur-sm border-b border-border z-50">
+   <header
+  className="fixed top-0 w-full bg-card/95 backdrop-blur-sm z-50"
+  style={{ borderBottom: '0.5px solid rgba(255, 255, 255, 0.15)' }}
+>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="font-serif font-bold text-xl text-primary">
-            B.NIVAS
+            NIVAS's PORTFOLIO
           </div>
 
           {/* Desktop Navigation */}
