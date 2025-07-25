@@ -1,39 +1,18 @@
-import {
-  Mail,
-  MapPin,
-  Send,
-  Linkedin,
-  Github,
-  Instagram,
-  CheckCircle,
-} from "lucide-react";
-import { useState, useRef } from "react";
-import emailjs from "emailjs-com";
+import { Mail, MapPin, Send, Linkedin, Github, Instagram, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setFormSubmitted(true);
 
-    if (!formRef.current) return;
+    setTimeout(() => {
+      setFormSubmitted(false);
+    }, 3000);
 
-    emailjs
-      .sendForm(
-        "service_6z238ap", // 🔁 Replace with your actual service ID
-        "template_lxd51ei", // 🔁 Replace with your template ID
-        formRef.current,
-        "tMWrZ7hqb-bQIOWNX" // 🔁 Replace with your EmailJS public key
-      )
-      .then(() => {
-        setFormSubmitted(true);
-        formRef.current?.reset();
-        setTimeout(() => setFormSubmitted(false), 3000);
-      })
-      .catch((error) => {
-        console.error("Email sending error:", error);
-      });
+    e.currentTarget.reset();
   };
 
   return (
@@ -52,9 +31,7 @@ const Contact = () => {
                   Get In Touch
                 </h3>
                 <p className="text-foreground leading-relaxed mb-6">
-                  Interested in working together, collaborating on a project, or
-                  just want to connect? I'd love to hear from you. Reach out
-                  using the details below or drop a message through the form.
+                  Interested in working together, collaborating on a project, or just want to connect? I'd love to hear from you. Reach out using the details below or drop a message through the form.
                 </p>
               </div>
 
@@ -65,9 +42,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">
-                      nivasbaluju@gmail.com
-                    </p>
+                    <p className="text-muted-foreground">nivasbaluju@gmail.com</p>
                   </div>
                 </div>
 
@@ -77,9 +52,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">
-                      Kavali, Nellore District, Andhra Pradesh
-                    </p>
+                    <p className="text-muted-foreground">Kavali, Nellore District, Andhra Pradesh</p>
                   </div>
                 </div>
 
@@ -142,77 +115,65 @@ const Contact = () => {
                 Send a Message
               </h3>
 
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Full Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    required
-                    className="w-full px-4 py-3 border border-border rounded-lg"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     placeholder="Enter your name"
+                    required
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    required
-                    className="w-full px-4 py-3 border border-border rounded-lg"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     placeholder="example@domain.com"
+                    required
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
+                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border border-border rounded-lg"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     placeholder="What’s this about?"
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    required
-                    className="w-full px-4 py-3 border border-border rounded-lg resize-none"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Type your message here..."
+                    required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg flex items-center justify-center space-x-2"
+                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-secondary transition-colors duration-300 flex items-center justify-center space-x-2 font-medium"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Message</span>
@@ -232,5 +193,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;
